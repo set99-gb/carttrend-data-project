@@ -1,3 +1,4 @@
+Bibliothèques nécessaires pour faire fonctionner le pipeline, notebooks et modèles :
 apache-airflow==2.8.1
 gspread
 pandas
