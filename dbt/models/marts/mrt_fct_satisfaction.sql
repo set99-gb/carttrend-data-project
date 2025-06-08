@@ -4,5 +4,5 @@
     materialized='table'
 ) }}
 
-SELECT *
-FROM {{ ref('stg_clients') }}
+SELECT * 
+FROM {{ ref('stg_satisfaction') }}
