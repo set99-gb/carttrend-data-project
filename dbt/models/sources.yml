@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: dataset_airflow       # Nom du dataset dans BigQuery
+    database: carttrend-460508  # Nom du projet BigQuery
+    schema: dataset_airflow     
+    tables:
+      - name: campagnes
+      - name: clients
+      - name: commandes
+      - name: details_commandes
+      - name: entrepots
+      - name: entrepots_machines
+      - name: posts
+      - name: produits
+      - name: promotions
+      - name: satisfaction
