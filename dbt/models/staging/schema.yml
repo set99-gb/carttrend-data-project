@@ -1,0 +1,96 @@
+# Dans ce fichier nous allons faire les tests génériques 
+
+version: 2
+
+models:
+  - name: stg_clients
+    description: "Modèle de staging pour nettoyer les données clients."
+    columns:
+      - name: id_client
+        description: "Identifiant unique du client."
+        tests:
+          - not_null
+          - unique
+  - name: stg_campagnes
+    description: "Modèle de staging pour les campagnes."
+    columns:
+      - name: id_campagne
+        description: "Identifiant de la campagne."
+        tests:
+          - not_null
+          - unique
+  - name: stg_commandes
+    description: "Modèle de staging pour les commandes."
+    columns:
+      - name: id_commande
+        description: "Identifiant de la commande."
+        tests:
+          - not_null
+          - unique
+  - name: stg_details_commandes
+    description: "Modèle de staging pour les lignes de commandes."
+    columns:
+      - name: id_commande
+        description: "Identifiant de la commande."
+        tests:
+          - not_null
+      - name: id_produit
+        description: "Identifiant du produit commandé."
+        tests:
+          - not_null
+  - name: stg_entrepots_machines
+    description: "Modèle de staging pour les machines des entrepôts."
+    columns:
+      - name: id_entrepot_machine
+        description: "Combinaison des identifiants machines, entrepôts et mois."
+        tests:
+          - not_null
+          - unique
+      - name: id_machine
+        description: "ID de la machine."
+        tests:
+          - not_null
+      - name: id_entrepot
+        description: "ID de l'entrepôt."
+        tests:
+          - not_null
+  - name: stg_entrepots
+    description: "Modèle de staging pour les entrepôts."
+    columns:
+      - name: id_entrepot
+        description: "Identifiant unique de l'entrepôt."
+        tests:
+          - not_null
+          - unique
+  - name: stg_posts
+    description: "Modèle de staging pour les posts."
+    columns:
+      - name: id_post
+        description: "Identifiant unique du post."
+        tests:
+          - not_null
+          - unique
+  - name: stg_produits
+    description: "Modèle de staging pour les produits."
+    columns:
+      - name: id_produit
+        description: "Identifiant unique du produit."
+        tests:
+          - not_null
+          - unique
+  - name: stg_promotions
+    description: "Modèle de staging pour les promotions au sens rabais, appliquées aux produits."
+    columns:
+      - name: id_promotion
+        description: "Identifiant unique de la promotion."
+        tests:
+          - not_null
+          - unique
+  - name: stg_satisfaction
+    description: "Modèle de staging pour les évaluations de la satisfaction client."
+    columns:
+      - name: id_satisfaction
+        description: "Identifiant unique de l'évaluation de la satisfaction client."
+        tests:
+          - not_null
+          - unique
