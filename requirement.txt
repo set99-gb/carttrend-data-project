@@ -1,0 +1,11 @@
+apache-airflow==2.8.1
+gspread
+pandas
+pandas-gbq
+google-auth
+google-api-python-client
+openpyxl
+requests
+scikit-learn
+xgboost
+jupyter
